@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Events.css">
+    <title>Events - EventAura</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html">EventAura</a></div>
+
+        <nav class="navbaritems">
+            <a href="index.html">Home</a>
+            <a href="index.html#midElement">About</a>
+            <a href="Events.html">Events</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Register.html" class="btn">Register</a>
+        </nav>
+    </header>
+
+    <div class="events-page">
+        <div class="events-header">
+            <h1>Explore Events</h1>
+            <p id="eventGreeting">Discover and register for amazing college events</p>
+        </div>
+
+        <div class="events-controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search events...">
+            </div>
+            <div class="filter-box">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="events-stats">
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-info">
+                    <h3 id="totalEvents">12</h3>
+                    <p>Total Events</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <h3 id="availableEvents">12</h3>
+                    <p>Available</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h3 id="registeredCount">0</h3>
+                    <p>Registered</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="eventsContainer" class="events-grid"></div>
+
+        <div id="noEvents" class="no-events" style="display: none;">
+            <div class="no-events-icon">🔍</div>
+            <h3>No events found</h3>
+            <p>Try adjusting your search or filter criteria</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>EventAura</h3>
+                <p>Explore college events easily.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="Events.html">Events</a><br>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Email: eventaura@gmail.com</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2026 EventAura</p>
+    </footer>
+
+    <script src="JS/Events.js"></script>
+</body>
+
+</html>

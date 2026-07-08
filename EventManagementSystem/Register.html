@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="css/registration.css">
+  <script src="JS/Dashboard.js"></script>
+
+  <!-- Theme script (runs immediately, before page renders) -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html">EventAura</a></div>
+
+    <nav class="navbaritems">
+      <a href="index.html">Home</a>
+      <a href="index.html#midElement">About</a>
+      <a href="Events.html">Events</a>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Register.html" class="btn">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Event Registration</h2>
+    <form id="registrationForm">
+
+      <label>Full Name</label>
+      <span>*</span>
+      <input type="text" id="name" pattern="^[A-Za-z]+$" required>
+
+      <label>Email</label>
+      <span>*</span>
+      <input type="email" id="email" required>
+
+      <label>Phone Number</label>
+      <span>*</span>
+      <input type="text" id="phone" required>
+
+      <label>College Name</label>
+      <span>*</span>
+      <input type="text" id="college" required>
+
+      <label>Event Selection</label>
+      <span>*</span>
+      <select id="event" required>
+        <option value="" selected disabled>-- Select Event --</option>
+        <option>Technical Workshop</option>
+        <option>Coding Contest</option>
+        <option>Paper Presentation</option>
+        <option>Cultural Event</option>
+      </select>
+
+
+      <label>Gender</label>
+      <div class="gender">
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+      </div>
+
+      <label>Date</label>
+      <span>*</span>
+      <input type="date" id="date" required>
+
+      <label>Password</label>
+      <span>*</span>
+      <input type="password" id="password" required onkeyup="checkPasswordStrength()">
+
+      <div class="password-strength" id="passwordStrength"></div>
+      <span class="error-message" id="passwordError"></span>
+
+
+      <div class="error" id="errorMsg"></div>
+
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+  <!-- Theme application script -->
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+    }
+  </script>
+</body>
+
+</html>

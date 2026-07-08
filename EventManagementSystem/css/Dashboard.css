@@ -1,0 +1,350 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --success: #16a34a;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  padding-top: 80px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  background-image: linear-gradient(to right, #1E90FF, #87CEFA);
+}
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+#userGreeting {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* =========================
+   UPCOMING EVENT
+========================= */
+#upcomingEvent {
+  margin: 15px 0 25px 0;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#upcomingEvent div {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 18px 22px;
+  border-radius: 16px;
+  width: 60%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+#upcomingEvent div:hover {
+  transform: translateY(-3px);
+}
+
+#upcomingEvent p {
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+/* =========================
+   TOP ROW
+========================= */
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.top-row h3,
+.top-row h4 {
+  margin: 0;
+}
+
+/* =========================
+   EVENT CARDS GRID
+========================= */
+#eventContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* =========================
+   EVENT CARD
+========================= */
+#eventContainer div {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--primary);
+  transition: 0.3s ease;
+}
+
+#eventContainer div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Text inside cards */
+#eventContainer h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+#eventContainer p {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Countdown */
+#eventContainer h4 {
+  margin-top: 10px;
+  padding: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+button {
+  /* margin-top: 10px; */
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* =========================
+   NAVBAR (UNCHANGED)
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+
+  color: white;
+  z-index: 1000;
+}
+
+.navbaritems {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 25px;
+}
+
+/* Logo */
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* Nav links */
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* Register button */
+.btn {
+  padding: 8px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  /* margin-left: 15px; */
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ===== DARK MODE ===== */
+/* ================= DARK MODE BASE ================= */
+body.dark {
+  background: #0f1115;
+  color: #e6e6e6;
+}
+
+/* smooth transition */
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ================= NAVBAR ================= */
+body.dark .navbar {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+body.dark nav a {
+  color: #e6e6e6;
+}
+
+body.dark nav a:hover {
+  color: #00d9ff;
+}
+
+/* ================= UPCOMING EVENT ================= */
+body.dark #upcomingEvent div {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f3f4f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= EVENT CARDS ================= */
+body.dark #eventContainer div {
+  background: #1a1d24;
+  color: #e6e6e6;
+  border-left: 5px solid #00d9ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark #eventContainer p {
+  color: #c7c7c7;
+}
+
+body.dark #eventContainer h3 {
+  color: #ffffff;
+}
+
+/* countdown */
+body.dark #eventContainer h4 {
+  background: #111827;
+  color: #00d9ff;
+}
+
+
+
+/* ================= BUTTON INSIDE CARD ================= */
+body.dark #eventContainer button {
+  background: #00d9ff;
+  color: #000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+body.dark #eventContainer button:hover {
+  background: #00b4d8;
+}
+
+body.dark .top-row h3,
+body.dark .top-row h4 {
+  color: #080808;
+}
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* layout */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* links */
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #00d9ff;
+}
+
+/* bottom text */
+.footer-bottom {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}

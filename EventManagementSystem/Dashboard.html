@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html">EventAura</a></div>
+
+        <nav class="navbaritems">
+            <a href="index.html">Home</a>
+            <a href="index.html#midElement">About</a>
+            <a href="Events.html">Events</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Register.html" class="btn">Register</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+    </header>
+    <div class="dashboard">
+        <h1>My Dashboard</h1>
+        <h4 id="userGreeting"></h4>
+        <h3>Upcoming Event</h3>
+        <div id="upcomingEvent"></div>
+        <div class="top-row">
+            <h3>Registered Events</h3>
+            <h4>
+                Total Registrations:
+                <span id="totalCount">0</span>
+            </h4>
+        </div>
+        <div id="eventContainer"></div>
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>EventAura</h3>
+                <p>Explore college events easily.</p>
+            </div>
+
+            <div>
+                <h4>Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="Events.html">Events</a><br>
+                <a href="Contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>Email: eventaura@gmail.com</p>
+            </div>
+
+        </div>
+
+        <p class="footer-bottom">© 2026 EventAura</p>
+
+    </footer>
+    <script src="JS/Dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Correct path -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="JS/script.js" defer></script>
+
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+
+    <title>EventAura</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html">EventAura</a></div>
+
+        <nav class="navbaritems">
+            <a href="index.html">Home</a>
+            <a href="#midElement">About</a>
+            <a href="Events.html">Events</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Register.html" class="btn">Register</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+
+        <!-- Slider -->
+        <div class="slider">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <h1>Welcome to EventAura 🎉</h1>
+                <p>Discover amazing events near you.</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <h1>Upcoming Events</h1>
+                <p>Music Fest | Tech Conference | Art Expo</p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <h1>Join Us</h1>
+                <p>Register now and never miss an event!</p>
+            </div>
+        </div>
+        <button class="explore-btn"><a href="Events.html" style="text-decoration: none;">Explore Events</a></button>
+    </section>
+
+    <div class="midElement" id="midElement">
+            <h3 style="color:rgb(64, 8, 116);">About EventAura</h3>
+            <h1>Indias's Largest College Event Network</h1>
+            <h4>From hackathon to cultural fests, we connect students with the most exciting events happening at top colleges across the country.</h4>
+    </div>
+ 
+    <section>
+        <div class="mid-next-section">
+
+            <div class="card">
+                <div class="icon purple">📅</div>
+                <h2>500+</h2>
+                <p>Events Hosted</p>
+            </div>
+
+            <div class="card">
+                <div class="icon pink">👥</div>
+                <h2>25K+</h2>
+                <p>Active Students</p>
+            </div>
+
+            <div class="card">
+                <div class="icon orange">🏅</div>
+                <h2>₹50L+</h2>
+                <p>Prize Pool</p>
+            </div>
+
+            <div class="card">
+                <div class="icon green">⚡</div>
+                <h2>120+</h2>
+                <p>Partner Colleges</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>EventAura</h3>
+                <p>Explore college events easily.</p>
+            </div>
+
+            <div>
+                <h4>Links</h4>
+                <a href="index.html">Home</a><br>
+                <a href="Events.html">Events</a><br>
+                <a href="Contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>Email: eventaura@gmail.com</p>
+            </div>
+
+        </div>
+
+        <p class="footer-bottom">© 2026 EventAura</p>
+
+    </footer>
+    <!-- Theme application script -->
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark");
+        }
+    </script>
+</body>
+
+</html>
